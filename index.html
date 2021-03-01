@@ -3,58 +3,18 @@
 <head>
 
     <meta charset="utf-8">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.9.0/brython.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.0/brython.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.0/brython_stdlib.min.js">
+    </script>
+    
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Equipes</title>
 
 </head>
-<body onload="brython()">
-    <script type="text/python">
-    from browser import document
-    import random
-    lista_alunos = []
-    lista_equipes = []
-    cabecas = []
-    contador_alunos = 0
-    contador_equipes = 0
-    contador_equipes_2 = 1
-    numero_alunos = int(input('Número de alunos: '))
-    numero_equipes = int(input('Número de equipes: '))
-    alunos_por_equipe = numero_alunos // numero_equipes
-    calculo_alunos_que_sobraram = numero_alunos % numero_equipes
-    alunos_que_sobraram = []
-    contador_forcado_1 = 0
-    contador_forcado_2 = 1
-    while contador_alunos <= numero_alunos - 1:
-        contador_alunos += 1
-        lista_alunos.append(contador_alunos)
-    #embaralhar = random.shuffle(lista_alunos)
-    if calculo_alunos_que_sobraram == 1: 
-        alunos_que_sobraram = [lista_alunos[-1]]
-    if calculo_alunos_que_sobraram >= 1:
-        alunos_que_sobraram = lista_alunos[calculo_alunos_que_sobraram * -1::]
-    if calculo_alunos_que_sobraram == 0:
-        alunos_que_sobraram = []
-    while contador_equipes <= numero_equipes - 1:
-        contador_equipes += 1
-        lista_equipes.append(f'Equipe {contador_equipes}')
-    while contador_equipes_2 <= numero_equipes:
-        lista_equipes_que_vai_aparecer = lista_equipes[contador_equipes_2 - 1]
-        if len(alunos_que_sobraram) != 0:
-            lista_alunos_que_vai_aparecer = lista_alunos[alunos_por_equipe * contador_forcado_1:alunos_por_equipe * contador_forcado_2] + [alunos_que_sobraram[-1]]
-            contador_forcado_1 += 1
-            contador_forcado_2 += 1
-            alunos_que_sobraram.pop(-1)
-        else:
-            lista_alunos_que_vai_aparecer = lista_alunos[alunos_por_equipe * contador_forcado_1:alunos_por_equipe * contador_forcado_2]
-            contador_forcado_1 += 1
-            contador_forcado_2 += 1
-        #print(f'''\n{lista_equipes_que_vai_aparecer}
-        #\n{lista_alunos_que_vai_aparecer}''')
-        document <= f'''{lista_equipes_que_vai_aparecer}
-        {lista_alunos_que_vai_aparecer}'''
-        contador_equipes_2 += 1
-</script>
+<body onload="brython()" >
+    <script type="text/python" src="./python.py"></script>
 </body>
 </html>
