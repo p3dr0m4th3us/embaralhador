@@ -1,13 +1,34 @@
 from browser import document, html
 import random
+import datetime
 lista_alunos = []
 lista_equipes = []
 cabecas = []
 contador_alunos = 0
 contador_equipes = 0
 contador_equipes_2 = 1
+data = str(datetime.datetime.today())
+segundo = str(data[17:19])
+hora = str(data[11:13])
+minuto = str(data[14:16])
+ano = str(data[0:4])
+mes = str(data[5:7])
+dia = str(data[8:10])
+tempo = f'''Dia {dia}/{mes}/{ano}, às {hora}:{minuto}:{segundo}'''
+disciplina = str(input('Disciplina: '))
+conteudo = str(input('Conteúdo: '))
+turma = str(input('Turma: '))
 numero_alunos = int(input('Número de alunos: '))
 numero_equipes = int(input('Número de equipes: '))
+document <= html.B(f'''Hora: {tempo}''')
+document <= html.B('<br>')
+document <= html.B(f'''Disciplina: {disciplina}''')
+document <= html.B('<br>')
+document <= html.B(f'''Conteúdo: {conteudo}''')
+document <= html.B('<br>')
+document <= html.B(f'''Turma: {turma}''')
+document <= html.B('<br>')
+document <= html.B('<br>')
 alunos_por_equipe = numero_alunos // numero_equipes
 calculo_alunos_que_sobraram = numero_alunos % numero_equipes
 alunos_que_sobraram = []
@@ -37,6 +58,7 @@ while contador_equipes_2 <= numero_equipes:
         lista_alunos_que_vai_aparecer = lista_alunos[alunos_por_equipe * contador_forcado_1:alunos_por_equipe * contador_forcado_2]
         contador_forcado_1 += 1
         contador_forcado_2 += 1
+    
     document <= html.B(f'''{lista_equipes_que_vai_aparecer}''')
     document <= html.B('<br>')
     document <= html.B(f'''{lista_alunos_que_vai_aparecer}''')
