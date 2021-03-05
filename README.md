@@ -1,37 +1,38 @@
-## Welcome to GitHub Pages
+# **Embaralhador**
 
-You can use the [editor on GitHub](https://github.com/p3dr0m4th3us/teste/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Este é uma simples aplicação que permite que professores possam fazer um sorteio de alunos em equipes de forma rápida e prática.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Ao acessar o site, aparecerá 5 campos de preenchimento:
+1 - Disciplina (Aqui digite a disciplina. Ex.: História)
+2 - Conteúdo (Aqui digite o conteúdo. Ex.: Revolucão Francesa)
+3 - Turma (Aqui digite a turma. Ex.: 2ºB)
+4 - Número de alunos (Aqui digite o número de alunos da turma. Ex.: 41)
+5 - Número de equipes (Aqui digite o número de equipes formadas. Ex.: 5)
+Será adicionado também o horário em que foi feito o sorteio.
 
-### Markdown
+O resultado será algo como:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Hora: Dia dd/mm/aaaa, às hh:mm:ss
+Disciplina: História
+Conteúdo: Revolução Francesa
+Turma: 2ºB
 
-```markdown
-Syntax highlighted code block
+Equipe 1
 
-# Header 1
-## Header 2
-### Header 3
+4, 37, 29, 20, 10, 40, 14, 41, 26
 
-- Bulleted
-- List
+Equipe 2
 
-1. Numbered
-2. List
+23, 8, 28, 31, 36, 24, 17, 32
 
-**Bold** and _Italic_ and `Code` text
+Equipe 3
 
-[Link](url) and ![Image](src)
-```
+16, 7, 15, 34, 3, 6, 18, 5
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Equipe 4
 
-### Jekyll Themes
+12, 1, 11, 35, 2, 9, 13, 19
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/p3dr0m4th3us/teste/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Equipe 5
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+27, 30, 33, 39, 38, 21, 25, 22
