@@ -3,6 +3,7 @@ import random
 import datetime
 lista_alunos = []
 lista_equipes = []
+lista_numero_alunos = []
 cabecas = []
 contador_alunos = 0
 contador_equipes = 0
@@ -65,3 +66,10 @@ while contador_equipes_2 <= numero_equipes:
     document <= html.B('<br>')
     document <= html.B('<br>')
     contador_equipes_2 += 1
+    lista_numero_alunos.append(len(lista_alunos_que_vai_aparecer))
+if lista_numero_alunos[0] != lista_numero_alunos[-1]:
+    document <= html.B(f'{lista_numero_alunos.count(lista_numero_alunos[0])} equipes de {lista_numero_alunos[0]} alunos')
+    document <= html.B('<br>')
+    document <= html.B(f'{lista_numero_alunos.count(lista_numero_alunos[-1])} equipes de {lista_numero_alunos[-1]} alunos')
+else:
+    document <= html.B(f'{numero_equipes} equipes de {alunos_por_equipe} alunos')
